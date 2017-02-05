@@ -23,12 +23,13 @@ module.exports = {
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
+        warnings: false,
+        drop_debugger: false
       },
       output: {
         comments: false
       }
     })
   ],
-  devtool: 'inline-source-map'
+  devtool: 'source-map'
 };
